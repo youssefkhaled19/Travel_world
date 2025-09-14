@@ -1,11 +1,16 @@
 import CityItem from "./CityItem";
 import styles from "./CityList.module.css";
 import Spinner from "./Spinner";
-function CityList({ cites, isLoading }) {
+import Message from "./Message";
+
+function CityList({ cities, isLoading }) {
   if (isLoading) return <Spinner />;
+  if (cities.lenght) {
+    return <Message message="add your first city by clicking on add" />;
+  }
   return (
     <ul className={styles.citylist}>
-      {cites.map((city) => (
+      {cities.map((city) => (
         <CityItem city={city} key={city.id} />
       ))}
     </ul>

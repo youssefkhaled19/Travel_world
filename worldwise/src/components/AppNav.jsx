@@ -4,8 +4,10 @@ function AppNav() {
   return (
     <div>
       <nav className={styles.nav}>
-        <NavLink to="cities">Cites</NavLink>
-        <NavLink to="countries">countries</NavLink>
+        <ul>
+          <NavLink to="cities">Cites</NavLink>
+          <NavLink to="countries">countries</NavLink>
+        </ul>
       </nav>
     </div>
   );
